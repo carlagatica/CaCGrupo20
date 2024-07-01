@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Login 🍕</title>
+</head>
+
+<body class="bodyRegistrarse">
+    <header class="headerRegistrarse">
+        <nav class="navegacion navbar navbar-expand-lg navbar-light">
+            <a class="anclaLogo navbar-brand" href="./AP-movies.html">🍕 AP-Movies</a>
+            <a class="anclaLogo navbar" href="../index_fijo.html">Volver al sitio principal</a>
+        </nav>
+    </header>
+
+    <main id="main" class="main">
+        <section data-aos="zoom-in" data-aos-duration="1000" class="seccionRegistrarse">
+            <form id="form" action="../php/iniciar_sesion.php" method="POST">
+                <h2 class="tituloRegistrarse">Iniciar Sesión</h2>
+                <div>
+                    <input type="email" placeholder="Email" id="email" name="email">
+                    <div id="error-email" class="error-text"></div>
+                </div>
+                <div>
+                    <input type="password" placeholder="Contraseña" id="password" name="password">
+                    <div id="error-password" class="error-text"></div>
+                </div>
+                <div>
+                    <input class="botonRegistrarse" type="submit" value="Iniciar Sesión">
+                </div>
+                <div>
+                    <a id="ayuda" class="ayuda" href="../registrarse.html">Registrarse</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <nav class="navegacion">
+            <ul class="listaNav">
+                <li class="listaItem"><a class="linkNav" href="">Términos y condiciones</a></li>
+                <li class="listaItem"><a class="linkNav" href="">Preguntas frecuentes</a></li>
+                <li class="listaItem"><a class="linkNav" href="">Ayuda</a></li>
+            </ul>
+        </nav>
+        <a href="#main" class="flechaArriba">
+            <img src="../assets/img/flecha-hacia-arriba.png" alt="ir arriba flecha">
+        </a>
+        <p class="aportes">Aporte realizado por coordinación JAVA-PHP Colaborador <a href="https://www.linkedin.com/in/gisele-milagros-gonzalez" target="_blank">Gisele M. Gonzalez</a></p>
+        <p class="aportes">Modificaciones realizadas por Grupo 20</p>
+        <p class="video">Proyecto paso a paso <a href="https://youtu.be/1PgXE1c5jOM" target="_blank">Video Youtube</a></p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="../AP-movies/js/valida_simple_inicio.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

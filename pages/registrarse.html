@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Registrarse 🍕</title>
+</head>
+
+<body class="bodyRegistrarse">
+    <header class="header">
+        <nav class="navegacion navbar navbar-expand-lg navbar-light">
+            <a class="anclaLogo navbar-brand" href="../AP-movies.html">🍕 AP-Movies</a>
+            <a class="anclaLogo navbar" href="../index_fijo.html">Volver al sitio principal</a>
+        </nav>
+    </header>
+    <main id="main" class="main">
+        <section data-aos="zoom-in" data-aos-duration="1000" class="seccionRegistrarse container">
+
+            <form action="../php/registrar.php" method="POST" id="form-registro" class="p-4 text-light rounded">
+                <h2 class="tituloRegistrarse text-center mb-4">Registro</h2>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Nombre" id="nombre" name="nombre">
+                    <div id="error-nombre" class="error-text"></div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Apellido" id="apellido" name="apellido">
+                    <div id="error-apellido" class="error-text"></div>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email" id="email" name="email">
+                    <div id="error-email" class="error-text"></div>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Contraseña" id="password" name="password">
+                    <div id="error-password" class="error-text"></div>
+                </div>
+                <div class="form-group">
+                    <input type="date" class="form-control" placeholder="Fecha de Nacimiento (dd/mm/aaaa)"
+                        id="fechaNacimiento" name="fechaNacimiento">
+                    <div id="error-fechaNac" class="error-text"></div>
+                </div>
+                <div class="form-group">
+                    <select name="pais" id="pais" class="form-control">
+                        <option value="">País</option>
+                        <option value="AR">Argentina</option>
+                        <option value="BO">Bolivia</option>
+                        <option value="BR">Brasil</option>
+                        <option value="CH">Chile</option>
+                        <option value="CO">Colombia</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="PY">Paraguay</option>
+                        <option value="PE">Perú</option>
+                        <option value="UY">Uruguay</option>
+                        <option value="VE">Venezuela</option>
+                    </select>
+                    <div id="error-pais" class="error-text"></div>
+                </div>
+                <div class="form-group form-check">
+                    <input class="form-check-input" type="checkbox" id="terminos">
+                    <label class="form-check-label textoCheck" for="terminos">Acepto los términos y condiciones</label>
+                    <div id="error-terminos" class="error-text"></div>
+                </div>
+                <div class="text-center">
+                    <input id="btn-reg" type="submit" name="register" value="Registrarse">
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <nav class="navegacion">
+            <ul class="listaNav">
+                <li class="listaItem"><a class="linkNav" href="">Términos y condiciones</a></li>
+                <li class="listaItem"><a class="linkNav" href="">Preguntas frecuentes</a></li>
+                <li class="listaItem"><a class="linkNav" href="">Ayuda</a></li>
+            </ul>
+        </nav>
+        <a href="#main" class="flechaArriba">
+            <img src="../assets/img/flecha-hacia-arriba.png" alt="ir arriba flecha">
+        </a>
+        <p class="aportes">Aporte realizado por coordinación JAVA-PHP Colaborador <a href="https://www.linkedin.com/in/gisele-milagros-gonzalez" target="_blank">Gisele M. Gonzalez</a></p>
+        <p class="aportes">Modificaciones realizadas por Grupo 20</p>
+        <p class="video">Proyecto paso a paso <a href="https://youtu.be/1PgXE1c5jOM" target="_blank">Video Youtube</a></p>
+    </footer>
+
+
+    <script src="../js/valida_simple_registrarse.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

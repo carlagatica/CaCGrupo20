@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>adm AP-movies🍕</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navegacion navbar navbar-expand-lg navbar-light">
+
+            <a class="anclaLogo navbar-brand" href="./AP-movies.html">
+                🍕 AP-Movies
+            </a>
+            <a class="anclaLogo navbar" href="../index_fijo.html">Volver al sitio principal</a>
+        </nav>
+    </header>
+
+    <section class="container mt-4">
+        <main id="mainAdministrador" class="mainAdmin">
+            <form id="formPelicula" action="" method="post" enctype="multipart/form-data" class="row row-cols-lg-auto g3 align-items-center">
+                <div class="container-adm">
+                    <h1 class="tituloSection">Gestión de Películas</h1>
+                    <div class="input-group mb-3">
+                        <input type="text" id="buscarPelicula" class="form-control" placeholder="Buscar película">
+                        <div class="input-group-append">
+                            <button id="buscarBtn" class="btn btn-success">Buscar</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="titulo" class="form-control" placeholder="Título de película">
+                    </div>
+                    <div id="titulo-error" class="error"></div>
+                    <div class="form-group">
+                        <input type="date" id="fechaLanzamiento" class="form-control"
+                            placeholder="Fecha de lanzamiento">
+                    </div>
+                    <div id="fechaLanzamiento-error" class="error"></div>
+                    <div class="form-group">
+                        <select id="genero" class="form-control">
+                            <option value="">Seleccionar género</option>
+                            <option value="Acción">Acción</option>
+                            <option value="Aventura">Aventura</option>
+                            <option value="Catástrofe">Catástrofe</option>
+                            <option value="Ciencia Ficción">Ciencia Ficción</option>
+                            <option value="Comedia">Comedia</option>
+                            <option value="Documentales">Documentales</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Fantasía">Fantasía</option>
+                        </select>
+                    </div>
+                    <div id="genero-error" class="error"></div>
+                    <div class="form-group">
+                        <input type="text" id="duracion" class="form-control" placeholder="Duración">
+                    </div>
+                    <div id="duracion-error" class="error"></div>
+                    <div class="form-group">
+                        <input type="text" id="director" class="form-control" placeholder="Director">
+                    </div>
+                    <div id="director-error" class="error"></div>
+                    <div class="form-group">
+                        <input type="text" id="reparto" class="form-control" placeholder="Reparto">
+                    </div>
+                    <div id="reparto-error" class="error"></div>
+                    <div class="form-group">
+                        <input type="text" id="sinopsis" class="form-control" placeholder="Sinopsis">
+                    </div>
+                    <div id="sinopsis-error" class="error"></div>
+                    <div class="form-group">
+                        <label for="imagen">Anexar imagen</label>
+                        <input type="file" class="btn btn-secondary btn-block" id="imagen" class="form-control-file">
+                    </div>
+                    <div id="imagen-error" class="error"></div>
+                    <div class="btn-group">
+                        <button id="agregarPelicula" class="btn btn-primary btn-space">Agregar película</button>
+                        <button id="borrarPelicula" class="btn btn-danger btn-space">Borrar película</button>
+                        <button id="borrarDatos" class="btn btn-info btn-space">Borrar datos</button>
+                        <button id="modificarPelicula" class="btn btn-warning btn-space">Modificar película</button>
+                    </div>
+                </div>
+
+            </form>
+        </main>
+    </section>
+
+    <section class="container mt-4">
+        <table class="table table-dark table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#id</th>
+                    <th scope="col">titulo</th>
+                    <th scope="col">fechaLanzamiento</th>
+                    <th scope="col">genero</th>
+                    <th scope="col">duracion</th>
+                    <th scope="col">director</th>
+                    <th scope="col">reparto</th>
+                    <th scope="col">sinopsis</th>
+                    <th scope="col">imagen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>El Padrino</td>
+                    <td>15/03/1972</td>
+                    <td>drama</td>
+                    <td>177min</td>
+                    <td>Francis Ford Coppola</td>
+                    <td>Marlon Brando
+                        Al Pacino
+                        Robert Duvall
+                        James Caan
+                        Richard Castellano
+                        Diane Keaton</td>
+                    <td>Don Vito Corleone es el respetado y temido jefe de una de las cinco familias de la mafia de
+                        Nueva York en los años 40. El hombre tiene cuatro hijos: Connie, Sonny, Fredo y Michael, que no
+                        quiere saber nada de los negocios sucios de su padre. Cuando otro capo, Sollozzo, intenta
+                        asesinar a Corleone, empieza una cruenta lucha entre los distintos clanes.</td>
+                    <td><img class="img-fluid img-thumbnail" width="200px" src="./assets/img/elpadrino.jpeg"
+                            alt="el padrino"> </td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Super Mario bros</td>
+                    <td>05/04/2023</td>
+                    <td>aventura</td>
+                    <td>92min</td>
+                    <td>Aaron Horvath
+                        Michael Jelenic</td>
+                    <td>Chris Pratt
+                        Anya Taylor-Joy
+                        Charlie Day
+                        Jack Black
+                        Keegan-Michael Key
+                        Seth Rogen
+                        Fred Armisen
+                        Sebastian Maniscalco
+                        Kevin Michael Richardson
+                        Charles Martinet</td>
+                    <td>Dos hermanos plomeros, Mario y Luigi, caen por las alcantarillas y llegan a un mundo subterráneo
+                        mágico en el que deben enfrentarse al malvado Bowser para rescatar a la princesa Peach, quien ha
+                        sido forzada a aceptar casarse con él.</td>
+                    <td><img class="img-fluid img-thumbnail" width="200px" src="./assets/img/mario.jpg"
+                            alt="Super Mario bros"> </td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mutant ghost wargirl</td>
+                    <td>04/06/2022</td>
+                    <td>drama</td>
+                    <td>71min</td>
+                    <td>Binjie Liu</td>
+                    <td>Zhenzhen Cui, Ziheng Guo, Mingxuan Li, Beige Liu, Mou Feng-Bin, Miya Muqi, Na Shang, Hu Qing
+                        Yun, Yunzhen Zeng</td>
+                    <td>Wu Qingqing es un agente de la Alianza de Seguridad Internacional (para combatir el crimen
+                        mutante) y recibe la orden de infiltrarse en el Hospital Plástico Medusa para recopilar
+                        evidencia de la investigación secreta sobre el fluido de inducción genética por parte de su
+                        consorcio directo para crear luchadores mutantes. Wu Qingqing se infiltra con éxito, pero se ve
+                        obligado a inyectar un fluido de inducción genética.</td>
+                    <td><img class="img-fluid img-thumbnail" width="200px" src="./assets/img/peli_15.jpg"
+                            alt="Mutant ghost wargirl"> </td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Orion and the dark</td>
+                    <td>02/02/2024</td>
+                    <td>drama</td>
+                    <td>90min</td>
+                    <td>Sean Charmatz</td>
+                    <td>Jacob Tremblay; Paul Walter Hauser; Werner Herzog; Angela Bassett; Ike Barinholtz; Shannon
+                        Chan-Kent</td>
+                    <td>Lo que más teme Orión es la oscuridad. Cuando la encarnación de su peor miedo hace una visita,
+                        Dark se lleva a Orión a una montaña rusa que gira alrededor del mundo para demostrarle que no
+                        hay nada que temer por la noche.</td>
+                    <td><img class="img-fluid img-thumbnail" width="200px" src="./assets/img/peli_11.jpg"
+                            alt="Orion and the dark"> </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer class="footer">
+        <nav class="navegacion container">
+            <div class="row text-center">
+                <div class="col-sm-3">
+                    <a class="anclaLogo navbar-brand linkNav" href=" ./AP-movies.html">
+                        🍕 AP-Movies
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./js/adm-peli.js"></script>
+    <script src="agregar_pelicula.js"></script><!--hay que crearlo-->
+</body>
+
+</html>
