@@ -22,7 +22,7 @@ if(isset($_POST['register'])) {
 
     if(mysqli_query($conn, $sql_query)) {
         echo ("<SCRIPT LANGUAGE='JavaScript'>
-        window.alert('Registro realizado')
+        window.alert('Usuario registrado exitosamente')
         window.location.href='../index.html';
         </SCRIPT>");
     }
