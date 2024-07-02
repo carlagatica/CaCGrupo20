@@ -6,7 +6,7 @@ $database_name="usersdb";
 
 $conn=mysqli_connect($servername,$username,$password,$database_name);
 if (!$conn) {
-    die("Coneccion fallida:" . mysqli_connect_error());
+    die("Conexion fallida:" . mysqli_connect_error());
 }
 
 if(isset($_POST['register'])) {
