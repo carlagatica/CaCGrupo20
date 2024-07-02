@@ -167,7 +167,7 @@ body {
                     transition: transform 0.3s, box-shadow 0.3s;
                     &:hover {
                         transform: scale(0.95);
-                        box-shadow: 0 0 10px #6863ca;
+                        box-shadow: 0px 0 10px #6863ca;
                         border-radius: 5px;
                     }
                 }
@@ -297,9 +297,10 @@ group>.form-control:not(:last-child) {
         }
         .botonRegistrarse {
             background-color: #000000ad;
+            border: 2px solid white;
             color: #ffffff;
             padding: 1rem 2rem;
-            border-radius: 5px;
+            border-radius: 25px;
             font-size: 1.2rem;
             font-weight: 700;
             text-decoration: none;
@@ -492,11 +493,17 @@ group>.form-control:not(:last-child) {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                transition: all 0.5s ease;
                 .imgAclamada {
                     border-radius: 5%;
                     width: 95%;
                     height: 95%;
                     object-fit: cover;
+                }
+                &:hover {
+                    box-shadow: -5px -5px 10px -5px #6863ca;
+                    border-radius: 5%;
+                    transform: scale(0.9);
                 }
             }
         }
@@ -612,11 +619,10 @@ group>.form-control:not(:last-child) {
                     background-color: black;
                     color: white;
                     padding: 0.5rem 1rem;
-                    border-radius: 5px;
+                    border-radius: 15px;
                     &:hover {
                         transform: scale(0.95);
                         box-shadow: 0 0 10px #6863ca;
-                        border-radius: 5px;
                     }
                 }
             }
