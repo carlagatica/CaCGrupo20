@@ -137,13 +137,23 @@ body {
     z-index:10;
     .navegacion {
         background-color: #000000ad;
+        padding: 0.5rem;
         .anclaLogo {
             text-decoration: none;
-            color: #007bff !important;
-            background-color: #000000ad;
+            color: azure  !important;
+            background-color: rgba(0, 123, 255, 0.2);
             font-size: larger;
+            font-weight: bolder;
             border-radius: 5px;
+            padding: 0.5rem 1rem;
             transition: transform 0.3s, box-shadow 0.3s;
+            &:hover {
+                transform: scale(0.95);
+                box-shadow: 0px 0 10px #6863ca;
+                background-color: rgba(139, 99, 202, 0);
+                color: #007bff !important;
+                border-radius: 5px;
+            }
         }
         .anclaLogo:hover {
             color: #6863ca;
@@ -160,7 +170,7 @@ body {
                 .linkNav {
                     text-decoration: none;
                     color: #007bff;
-                    background-color: #000000ad;
+                    /*background-color: #000000ad;*/
                     font-weight: 700;
                     font-size: larger;
                     padding: 0.5rem 1rem;
