@@ -1,3 +1,4 @@
+
 <?php
 $servername="localhost";
 $username="root";
@@ -20,11 +21,19 @@ if(isset($_POST['register'])) {
     $sql_query = "INSERT INTO users (nombre, apellido, email, pass, fechaNacimiento, pais) VALUES ('$nombre', '$apellido', '$email', '$pass', '$fechaNacimiento', '$pais')";
 
     if(mysqli_query($conn, $sql_query)) {
-        echo "Usuario generado exitosamente";
+        echo ("<SCRIPT LANGUAGE='JavaScript'>
+        window.alert('Registro realizado')
+        window.location.href='../index.html';
+        </SCRIPT>");
+    }
     }
     else {
+        echo ("<SCRIPT LANGUAGE='JavaScript'>
+        window.alert('Error en el registro')
+        window.location.href='../pages/registrarse.html';
+        </SCRIPT>");
         echo "Error: " . $sql . "" . mysqli_error($conn);
     }
     mysqli_close($conn);
-}
+
 ?>
