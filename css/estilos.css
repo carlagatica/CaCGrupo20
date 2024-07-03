@@ -222,7 +222,7 @@ group>.form-control:not(:last-child) {
     border: 2px solid #0f2b55 !important;
 }
 .form-control {
-    margin: 1rem;
+    margin: 1rem 0px !important;
 }
 
 .btn-outline-secondary {

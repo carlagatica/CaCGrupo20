@@ -33,7 +33,7 @@
                     <h1 class="tituloSection">Gestión de Películas</h1>
                     <h2 class="subtituloSection">Agregar películas</h2>
 
-                    <form id="formPelicula" action="../api_php/peliculas.php" method="post" enctype="multipart/form-data" class=" row-cols-lg-auto g3 align-items-center">
+                    <form id="formNuevaPelicula" action="../api_php/peliculas.php" method="post" enctype="multipart/form-data" class=" row-cols-lg-auto g3 align-items-center">
                     <div class="form-group">
                         <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Título de película">
                         <div id="titulo-error" class="error"></div>
@@ -59,11 +59,9 @@
                     <div id="reparto-error" class="error"></div>
                     <input type="text" id="sinopsis" name="sinopsis" class="form-control" placeholder="Sinopsis">
                     <div id="sinopsis-error" class="error"></div>
-                    <!--<label for="imagen" style="color: white;">Anexar imagen</label>
-                    <input type="file" class="btn btn-secondary btn-block" id="imagen" class="form-control-file">
-                    <div id="imagen-error" class="error"></div> -->
-                    <input type="text" id="imagen" name="imagen" class="form-control" placeholder="Link de imagen de portada">
-                    <div id="imagen-error" class="error"></div>
+                    <label for="imagen" style="color: white;">Anexar imagen</label>
+                    <input type="file" class="btn btn-secondary btn-block" id="imagen" name="imagen" class="form-control-file">
+                    <div id="imagen-error" class="error"></div> 
                     <div class="btn-group">
                         <input type="submit" id="agregarPelicula" class="btn btn-primary btn-space" value="Agregar película">
                     </div>
@@ -90,7 +88,7 @@
     AOS.init();
 </script>
 <script src="./js/adm-peli.js"></script>
-<script src="agregar_pelicula.js"></script><!--hay que crearlo-->
+<script src="../js/post_pelicula.js"></script>
 </body>
 
 </html>
