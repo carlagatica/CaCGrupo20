@@ -28,68 +28,16 @@
 
     <section class="container mt-4">
         <main id="mainAdministrador" class="mainAdmin">
-            <form id="formPelicula" action="" method="post" enctype="multipart/form-data" class="row row-cols-lg-auto g3 align-items-center">
                 <div class="container-adm">
                     <h1 class="tituloSection">Gestión de Películas</h1>
-                    <div class="input-group mb-3">
-                        <input type="text" id="buscarPelicula" class="form-control" placeholder="Buscar película">
-                        <div class="input-group-append">
-                            <button id="buscarBtn" class="btn btn-success">Buscar</button>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Título de película">
-                    </div>
-                    <div id="titulo-error" class="error"></div>
-                    <div class="form-group">
-                        <input type="date" id="fechaLanzamiento" name="fechaLanzamiento" class="form-control"
-                            placeholder="Fecha de lanzamiento">
-                    </div>
-                    <div id="fechaLanzamiento-error" class="error"></div>
-                    <div class="form-group">
-                        <select id="genero" name="genero" class="form-control">
-                            <option value="">Seleccionar género</option>
-                            <option value="Acción">Acción</option>
-                            <option value="Aventura">Aventura</option>
-                            <option value="Catástrofe">Catástrofe</option>
-                            <option value="Ciencia Ficción">Ciencia Ficción</option>
-                            <option value="Comedia">Comedia</option>
-                            <option value="Documentales">Documentales</option>
-                            <option value="Drama">Drama</option>
-                            <option value="Fantasía">Fantasía</option>
-                        </select>
-                    </div>
-                    <div id="genero-error" class="error"></div>
-                    <div class="form-group">
-                        <input type="text" id="duracion" name="duracion" class="form-control" placeholder="Duración">
-                    </div>
-                    <div id="duracion-error" class="error"></div>
-                    <div class="form-group">
-                        <input type="text" id="director" name="director" class="form-control" placeholder="Director">
-                    </div>
-                    <div id="director-error" class="error"></div>
-                    <div class="form-group">
-                        <input type="text" id="reparto" name="reparto" class="form-control" placeholder="Reparto">
-                    </div>
-                    <div id="reparto-error" class="error"></div>
-                    <div class="form-group">
-                        <input type="text" id="sinopsis" name="sinopsis" class="form-control" placeholder="Sinopsis">
-                    </div>
-                    <div id="sinopsis-error" class="error"></div>
-                    <div class="form-group">
-                        <label for="imagen" style="color: white;">Anexar imagen</label>
-                        <input type="file" class="btn btn-secondary btn-block" id="imagen" class="form-control-file">
-                    </div>
-                    <div id="imagen-error" class="error"></div>
-                    <div class="btn-group">
-                        <button id="agregarPelicula" class="btn btn-primary btn-space">Agregar película</button>
-                        <button id="borrarPelicula" class="btn btn-danger btn-space">Borrar película</button>
-                        <button id="borrarDatos" class="btn btn-info btn-space">Borrar datos</button>
-                        <button id="modificarPelicula" class="btn btn-warning btn-space">Modificar película</button>
-                    </div>
+                    <table class="adminmenu">
+                        <tr><td class="cont"><a href="agregarpeli.html">Agregar película</a></td></tr>
+                        <tr><td class="cont"><a href="eliminarpeli.html">Borrar película</a></td></tr>
+                        <tr><td class="cont"><a href="listarpeli.html">Listar películas</a></td></tr>
+                        <tr><td class="cont"><a href="editarpeli.html">Modificar película</a></td></tr>
+                        <tr><td>                            
+                    </table>          
                 </div>
-
-            </form>
         </main>
     </section>
 

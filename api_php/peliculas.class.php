@@ -12,24 +12,28 @@
             #convertimos el json a un array asociativo
             $datos = json_decode($json, true);
              #si no estan los datos requeridos
-            if (!isset($datos['titulo']) ||  !isset($datos['genero']) || !isset($datos['duracion']) || !isset($datos['imagen'])) {
+            if (!isset($datos['titulo']) ||  !isset($datos['fechaLanzamiento']) || !isset($datos['genero']) || !isset($datos['duracion']) || !isset($datos['director']) || !isset($datos['reparto']) || !isset($datos['sinopsis']) || !isset($datos['imagen'])) {
                 $this->response['status'] = "error";
                 $this->response['result'] = array(
                     "error_id" => "400",
                     "error_msg" => "Datos enviados incompletos o con formato incorrecto"
                 );
                  #devolvemos un bad request
-                return $this->response;
-              
-            } else {
+                return $this->response; 
+            }
+            else {
                 $titulo = $datos['titulo'];
-                $duracion = $datos['duracion'];
+                $fechaLanzamiento = $datos['fechaLanzamiento'];
                 $genero = $datos['genero'];
+                $duracion = $datos['duracion'];
+                $director = $datos['director'];
+                $reparto = $datos['reparto'];
+                $sinopsis = $datos['sinopsis'];
                 $imagen = $datos['imagen'];
                // codigo para levantar la imagen guardarla en el server y guardar la ruta en la base de datos
                
                // id_pelicula autonumerico
-                $query = "INSERT INTO peliculas (id_pelicula, titulo, genero, duracion, imagen) VALUES (NULL, '$titulo','$genero', '$duracion', '$imagen')";   
+                $query = "INSERT INTO peliculas (id_pelicula, titulo, fechaLanzamiento, genero, duracion, director, reparto, sinopsis, imagen) VALUES (NULL, '$titulo', '$fechaLanzamiento', '$genero', '$duracion', '$director', '$reparto', '$sinopsis' '$imagen')";   
                 // este method es de la clase conexion, la clase pelicula hereda de conexion, asi que puede usar los methods y atributos protected o public         
                 $datos = $this->nonQueryId($query); // retorna el id del registro insertado
                 if ($datos) { // si tiene un id
@@ -108,9 +112,9 @@
             #convertimos el json a un array asociativo
             $datos = json_decode($json, true);
 
-            
+               
             #si no estan los datos requeridos
-            if (!isset($datos['id_pelicula']) || !isset($datos['titulo']) || !isset($datos['genero']) || !isset($datos['duracion']) || !isset($datos['imagen'])) {
+            if (!isset($datos['id_pelicula']) || !isset($datos['titulo']) || !isset($datos['fechaLanzamiento']) || !isset($datos['genero']) || !isset($datos['duracion']) || !isset($datos['director']) || !isset($datos['reparto']) || !isset($datos['sinopsis']) || !isset($datos['imagen'])) {
                 $this->response['status'] = "error";
                 $this->response['result'] = array(
                     "error_id" => "400",
@@ -121,12 +125,16 @@
             } else {
                 $id = $datos['id_pelicula'];
                 $titulo = $datos['titulo'];
+                $fechaLanzamiento = $datos['fechaLanzamiento'];
                 $genero = $datos['genero'];
                 $duracion = $datos['duracion'];
+                $director = $datos['director'];
+                $reparto = $datos['reparto'];
+                $sinopsis = $datos['sinopsis'];
                 $imagen = $datos['imagen'];
                 // codigo para levantar la imagen guardarla en el server y guardar la ruta en la base de datos
                 // faltan validaciones para la fecha de lanzamiento 
-                $query = "UPDATE peliculas SET titulo = '$titulo', genero = '$genero', duracion = '$duracion',imagen = '$imagen' WHERE id_pelicula = '$id'";            
+                $query = "UPDATE peliculas SET titulo = '$titulo', fechaLanzamiento = '$fechaLanzamiento', genero = '$genero', duracion = '$duracion', director = '$director', reparto = '$reparto', sinopsis = '$sinopsis', imagen = '$imagen' WHERE id_pelicula = '$id'";            
                 $datos = $this->nonQuery($query);
                 if ($datos >= 1) {
                     $respuesta = $this->response;
