@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const fechaLanzamiento = formData.get('fechaLanzamiento');
         const genero = formData.get('genero');
         const duracion = formData.get('duracion');
-        const director = formData.get('directos');
+        const director = formData.get('director');
         const reparto = formData.get('reparto');
         const sinopsis = formData.get('sinopsis');
         const imagen = formData.get('imagen');
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             })
         };
         //realizo la peticion fetch a la api para agregar una pelicula
-        const response = await fetch('http://localhost/sitiopelis/api_php/peliculas.php', options); //ver link, tira mensaje correcto pero no carga nada en db
+        const response = await fetch('http://localhost:8080/sitiopelis/api_php/peliculas.php', options); //ver link, tira mensaje correcto pero no carga nada en db
         //obtengo la respuesta
         const data = await response.json();
         //si la respuesta es correcta, muestro un mensaje de exito y limpio los inputs del formulario

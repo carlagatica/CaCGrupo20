@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             'Content-Type': 'application/json'
         }
     };
-    const response = await fetch('http://localhost:8080/apisimple/peliculas', options);
+    const response = await fetch('http://localhost:8080/sitiopelis/api_php/peliculas.php', options); //insertar link a api
     const data = await response.json();
     console.log(data);
     //{idPelicula: 2, titulo: 'Transformers 2', genero: 'Accion', duracion: '3h 2m', imagen: 'transformers.jpg'}
@@ -37,9 +37,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         // creamos un td con la duracion de la pelicula
         const tdDuration = document.createElement('td');
         tdDuration.textContent = movie.duracion;
+        // creamos un td con el director de la pelicula
+        const tdDirector = document.createElement('td');
+        tdDirector.textContent = movie.director;
         // creamos un td con los generos de la pelicula
         const tdGenres = document.createElement('td');
         tdGenres.textContent = movie.genero;
+        // creamos un td con el reparto de la pelicula
+        const tdReparto = document.createElement('td');
+        tdReparto.textContent = movie.reparto;
         // creamos un td con la imagen de la pelicula
         const tdImage = document.createElement('td');
         const img = document.createElement('img');
@@ -54,6 +60,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         tr.appendChild(tdTitle);
         tr.appendChild(tdDuration);
         tr.appendChild(tdGenres);
+        tr.appendChild(tdDirector);
+        tr.appendChild(tdReparto);
         tr.appendChild(tdImage);
         // añadimos el tr a al body
         tbody.appendChild(tr);
